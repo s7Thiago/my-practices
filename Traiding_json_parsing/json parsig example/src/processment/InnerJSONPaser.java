@@ -33,7 +33,6 @@ public class InnerJSONPaser {
 		
 		//for each Pessoa element in rootArray, acess the name and the last name values, 
 		//and instantiates an Pessoa object putting the fields in the respective parameter
-		
 		for(JsonElement element : rootArray) {
 			
 			id = element.getAsJsonObject().get("userid").getAsInt();
