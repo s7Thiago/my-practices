@@ -1,0 +1,84 @@
+[{
+    "firstName": "John",
+    "lastName": "Smith",
+    "age": 25,
+    "address": {
+        "streetAddress": "21 2nd Street",
+        "city": "New York",
+        "state": "NY",
+        "postalCode": 10021
+    },
+    "phoneNumbers": [
+        {
+            "type": "home",
+            "number": "212 555-1234"
+        },
+        {
+            "type": "fax",
+            "number": "646 555-4567" 
+        }
+    ] 
+},
+
+{"firstName": "Sarah",
+    "lastName": "Jhonson",
+    "age": 23,
+    "address": {
+        "streetAddress": "25 4nd Street",
+        "city": "New Jersey",
+        "state": "NJ",
+        "postalCode": 13041
+    },
+    "phoneNumbers": [
+        {
+            "type": "home",
+            "number": "212 225-1235"
+        },
+        {
+            "type": "fax",
+            "number": "381 224-9076" 
+        }
+    ]
+},
+
+{"firstName": "Jack",
+    "lastName": "Mcart",
+    "age": 27,
+    "address": {
+        "streetAddress": "25 2nd Street",
+        "city": "New Jersey",
+        "state": "NJ",
+        "postalCode": 13043
+    },
+    "phoneNumbers": [
+        {
+            "type": "home",
+            "number": "302 485-6031"
+        },
+        {
+            "type": "Phone",
+            "number": "241 125-6778" 
+        }
+    ]
+},
+{"firstName": "John",
+    "lastName": "Stanley",
+    "age": 26,
+    "address": {
+        "streetAddress": "Street of oranges, park place",
+        "city": "Chicago",
+        "state": "CH",
+        "postalCode": 15269
+    },
+    "phoneNumbers": [
+        {
+            "type": "home",
+            "number": "361 370-209"
+        },
+        {
+            "type": "fax",
+            "number": "492 336-0187" 
+        }
+    ]
+}
+]
