@@ -75,14 +75,6 @@ public class InnerJsonParser {
 				phoneNumbers.add(phoneNumberObject);
 			}
 			
-			/*System.out.println("Name: " + firstName + " " + lastName 
-								+ "\nAge: " + age
-								+ "\nStreet Adress: " + streetAddress
-								+ "\nCity: " + city
-								+ "\nState: " + state
-								+ "\nPostal Code: " + postalCode
-								+ "\n***********************************\n");*/
-			
 			address = new Address(streetAddress, city, state, postalCode);
 			contact = new Contact(firstName, lastName, age, address, phoneNumbers.get());
 			
