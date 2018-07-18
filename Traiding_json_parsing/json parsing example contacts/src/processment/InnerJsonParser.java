@@ -22,17 +22,12 @@ public class InnerJsonParser {
 		List<Contact> innerContactsList = this.getContactsList();
 		
 		//Grouping objects who will receive the datas
-		Contact contact;
-		Address address;
 		PhoneNumbers phoneNumbers;
 		PhoneNumber phoneNumberObject;
 		
 		//Grouping data to set in objects
 		String firstName, lastName, PhonenumberType, streetAddress, city, state, phoneNumber;
 		int age, postalCode;
-		JsonObject addressObject;
-		JsonArray phoneNumberFromJson;
-		
 		
 		//Will be used for provide acess to json inner structure
 		JsonParser parser = new JsonParser();
@@ -52,14 +47,14 @@ public class InnerJsonParser {
 			age = contactJsonObject.get("age").getAsInt();
 			
 			//getting the adress datas
-			addressObject = contactJsonObject.get("address").getAsJsonObject();
+			JsonObject addressObject = contactJsonObject.get("address").getAsJsonObject();
 			streetAddress = addressObject.get("streetAddress").getAsString();
 			city = addressObject.get("city").getAsString();
 			state = addressObject.get("state").getAsString();
 			postalCode = addressObject.get("postalCode").getAsInt();
 			
 			//getting the phone numbers
-			phoneNumberFromJson = contactJsonObject.get("phoneNumbers").getAsJsonArray();
+			JsonArray phoneNumberFromJson = contactJsonObject.get("phoneNumbers").getAsJsonArray();
 			phoneNumbers = new PhoneNumbers();
 			
 			for(JsonElement phoneContactElement : phoneNumberFromJson) {
@@ -75,8 +70,8 @@ public class InnerJsonParser {
 				phoneNumbers.add(phoneNumberObject);
 			}
 			
-			address = new Address(streetAddress, city, state, postalCode);
-			contact = new Contact(firstName, lastName, age, address, phoneNumbers.get());
+			Address address = new Address(streetAddress, city, state, postalCode);
+			Contact contact = new Contact(firstName, lastName, age, address, phoneNumbers.get());
 			
 			innerContactsList.add(contact);
 			
