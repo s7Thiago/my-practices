@@ -1,5 +1,6 @@
 package objects;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -46,10 +47,45 @@ public class User {
 	
 	//Will be used for add each user's record, and cause these records
 	//are linked to their respective user objects  
-	public void addNewUserSaveToList(String saveName, String saveContent) {
+	public void addNewUserSaveToList(String saveName, String saveContent) throws IOException {
 		UserSave userSave = new UserSave(saveName, saveContent);
 		
 		savesList.put(saveName, userSave);
 	}
-
+	
+	//Operations for user's saves
+	public void removeUserSave(String saveKey) {
+		savesList.remove(saveKey);
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
