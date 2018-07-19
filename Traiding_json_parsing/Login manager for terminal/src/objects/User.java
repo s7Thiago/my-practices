@@ -10,6 +10,7 @@ public class User {
 	private UserSecurityData autenticationData;
 	private Map<String, UserSave> savesList = new HashMap<String, UserSave>();
 
+	//Constructors, getters and setters
 	public String getName() {
 		return name;
 	}
@@ -41,7 +42,10 @@ public class User {
 	public void setSavesList(Map<String, UserSave> savesList) {
 		this.savesList = savesList;
 	}
+	//End of constructors, getters and setters
 	
+	//Will be used for add each user's record, and cause these records
+	//are linked to their respective user objects  
 	public void addNewUserSaveToList(String saveName, String saveContent) {
 		UserSave userSave = new UserSave(saveName, saveContent);
 		

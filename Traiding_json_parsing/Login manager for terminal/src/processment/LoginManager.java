@@ -9,6 +9,7 @@ public class LoginManager {
 
 	private List<User> usersList = new ArrayList<User>();
 
+	//Constructors, getters and setters
 	public List<User> getUsersList() {
 		return usersList;
 	}
@@ -32,4 +33,5 @@ public class LoginManager {
 	public void deleteUser(User user) {
 
 	}
+	//End of constructors, getters and setters
 }

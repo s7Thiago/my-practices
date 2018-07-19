@@ -6,6 +6,7 @@ public class UserSecurityData {
 	private String email;
 	private String password;
 	
+	//Constructors, getters and setters
 	public UserSecurityData(String userName, String email, String password) {
 		super();
 		this.userName = userName;
@@ -36,5 +37,6 @@ public class UserSecurityData {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	//End of constructors, getters and setters
 
 }
