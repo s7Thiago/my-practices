@@ -30,7 +30,7 @@ public class PhoneNumber {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "Type: " + this.getType()
-			 + "\nNumber: " + this.getNumber();
+		return "\n|Type: " + this.getType()
+			 + "\n|Number: " + this.getNumber();
 	}
 }
