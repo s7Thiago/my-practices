@@ -1,18 +1,15 @@
 package objects;
 
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
 
-public class UserSave {
+import processment.io.InnerFileOperator;
+
+public class UserSave extends InnerFileOperator {
 
 	private String saveKey;
 	private String saveContent;
-	private String absolutePath;
-	private File fileReference;
 
-	//Constructors, getters and setters
+	// Constructors, getters and setters
 	public UserSave(String saveKey, String saveContent) throws IOException {
 		super();
 		setSaveKey(saveKey);
@@ -36,81 +33,29 @@ public class UserSave {
 	public void setSaveContent(String saveContent) {
 		this.saveContent = saveContent;
 	}
-	
-	public String getAbsolutePath() {
-		return absolutePath;
-	}
 
-	private void setAbsolutePath(String absolutePath) {
-		this.absolutePath = absolutePath;
-	}
-	
-	//End of constructors, getters and setters
+	// End of constructors, getters and setters
 
-	//Operations of this class
-	
-	//Create a save in the project root
+	// Operations of this class
+
+	// Create a save in the project root
 	public void create() throws IOException {
-		File defaultPath = new File("resources\\");
-		fileReference = new File(defaultPath, getSaveKey() + ".json");
-		
-		//If the default path does not exists
-		if(!(defaultPath.isDirectory() && defaultPath.exists())) {
-			defaultPath.mkdirs();
-		}
-		
-		//If the file does not exists
-		if(!fileReference.exists()) {
-			System.out.println("The file with name " + getSaveKey() + " does not exists in disk. Creating...");
-			fileReference.createNewFile();
-			setAbsolutePath(this.fileReference.getAbsolutePath());
-		} else {
-			System.out.println("An file called " + "\"" + getSaveKey() + ".json\"" + " already exists!");
-		}
+		setAbsolutePath(this.getDefaultPath() + "saves\\");
+		createNewFile(getSaveKey());
 	}
-	
+
 	public void delete(String absolutePath) {
-		
+
 	}
-	
+
 	private void write(String filePathReference, String saveContent) throws IOException {
-		File file = new File(filePathReference);
-		FileWriter fw = new FileWriter(file);
-		PrintWriter pw = new PrintWriter(fw);
 		
-		pw.print(saveContent);
+		//if(!(this.getFileReference().exists())) {
+			writeInFile(filePathReference, saveContent);
+		/*}else {
+			System.out.println("Atenção -> Um arquivo com as mesmas características já existe!\n\n");
+		}*/
 		
-		fw.flush();
-		fw.close();
-		pw.flush();
-		pw.close();
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
