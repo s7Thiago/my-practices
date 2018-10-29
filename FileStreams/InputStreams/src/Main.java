@@ -9,11 +9,11 @@ public class Main{
 		
 		InputStream inputstream;
 		try {
-			inputstream = new FileInputStream("/storage/emulated/0/AppProjects/Java/Testes Projetos/mFileOperations5/Anderson Vieira@.txt");
+			inputstream = new FileInputStream("/storage/emulated/0/AppProjects/Java/Testes Projetos/TraidingFiles/FileStringArrayList.txt");
 
 			int data = inputstream.read();
 			while (data != -1) {
-				System.out.print(String.valueOf(data));
+				System.out.print((char) data);
 
 				data = inputstream.read();
 
