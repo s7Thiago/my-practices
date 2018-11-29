@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1543507480 source:d:\git test workspace\my-practices\linguagem_c\exemplo_entrada_de_dados\main.c
+	<stdio.h>
+	<stdlib.h>
+
