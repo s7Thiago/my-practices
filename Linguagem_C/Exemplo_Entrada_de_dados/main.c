@@ -10,7 +10,11 @@ int main() {
     gets(nome);
 
     printf("Agora o sobrenome: ");
-    gets(sobrenome);
+    //O operador [^\n] diz faz a scanf() parar de pegar a string
+    //somente quando uma NEW_LINE eh encontrada, alterando assim
+    //o comportamento padrao (parar quando encontrar um caractere
+    //de espaço);
+    scanf("%[^\n]", sobrenome);
 
     printf("E agora a idade: ");
     scanf("%d", &idade);
