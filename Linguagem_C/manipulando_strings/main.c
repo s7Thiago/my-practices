@@ -45,5 +45,7 @@ int main() {
     }
     printf("\nA string \"%s\" tem %d vogais\n", stringB, qtdeVogais);
 
+    //
+
     return 0;
 }
