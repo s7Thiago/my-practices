@@ -1,0 +1,10 @@
+<br>
+<input type="text" [(ngModel)]="task">
+<button type="button" (click)="add()">Add to List</button>
+
+<!-- Diretiva ngFor para colocar os elementos da lista tasks na interface -->
+<ul>
+  <li *ngFor="let item of tasks">
+    {{ item }}
+  </li>
+</ul>
