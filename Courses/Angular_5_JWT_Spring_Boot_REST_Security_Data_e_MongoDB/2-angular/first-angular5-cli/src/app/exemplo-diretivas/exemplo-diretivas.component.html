@@ -1,0 +1,11 @@
+<!-- ngIf -->
+<div *ngIf="isAdmin">
+  Administrator
+</div>
+
+<!-- ngSwitch -->
+<div [ngSwitch]="profile">
+  <div *ngSwitchCase="1">You can read & write</div>
+  <div *ngSwitchCase="2">You can read</div>
+  <div *ngSwitchDefault>You have default permissions</div>
+</div>
