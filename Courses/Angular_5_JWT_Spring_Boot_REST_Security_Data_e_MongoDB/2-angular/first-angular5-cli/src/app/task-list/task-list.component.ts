@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./task-list.component.css']
 })
 export class TaskListComponent {
-  title = 'Tasks';
   tasks = [];
   task = ""; // Representa o valor do campo de texto
   isAdmin = true;

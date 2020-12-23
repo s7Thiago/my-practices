@@ -2,3 +2,22 @@
   Welcome to {{ title }}!
 </h1>
 <app-task-list></app-task-list>
+
+<br>
+
+{{ user | json}}
+<br>
+
+{{ upperText | uppercase}}
+<br>
+
+{{ upperText | lowercase}}
+<br>
+
+{{ percentValue | percent}}
+<br>
+
+{{ date | date : 'dd/MM/yyyy' }}
+<br>
+
+{{ money | currency : 'BRL' }}
