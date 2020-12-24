@@ -10,4 +10,10 @@ public class FirstSpringBootController {
     public String showTex() {
         return "Hello planet!!!\n this is my Sprig Boot application";
     }
+
+    @RequestMapping("/")
+    public String index() {
+        return "Index page";
+    }
+
 }
