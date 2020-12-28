@@ -34,7 +34,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	}
 
-	// Serve para que o spring não bloqueie as nossa páginas estáticas
+	// Serve para que o spring não bloqueie as nossas páginas estáticas
 	@Override
 	public void configure(WebSecurity web) throws Exception {
 		web.ignoring().antMatchers("/style/**");
